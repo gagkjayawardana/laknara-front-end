@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Header_Container = styled.div`
   width: 100%;
   min-height: 100px;
   height: fix-content;
-  // border: 1px solid black;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding-top: 40px;
@@ -43,6 +43,13 @@ const Button_Line = styled.div`
 `;
 
 function Header() {
+  const navigate = useNavigate();
+  const navigateToRegister = () => {
+    navigate('/register');
+  };
+  const navigateToOnboard = () => {
+    navigate('/');
+  };
   return (
     <Header_Container>
       <Header_Title_with_Logo>
@@ -69,6 +76,7 @@ function Header() {
               marginRight: '10px'
             }
           }}
+          onClick={navigateToOnboard}
           variant="text">
           Log In
         </Button>
@@ -80,6 +88,7 @@ function Header() {
             marginLeft: '20px',
             '&:hover': { color: '#0000ff' }
           }}
+          onClick={navigateToRegister}
           variant="text">
           Register
         </Button>

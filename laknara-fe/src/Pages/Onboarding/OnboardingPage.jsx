@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 const Onboarding_Page = styled.div`
   width: 100%;
@@ -108,7 +109,12 @@ function OnboadingPage() {
   const phase1 = `"The guardianship of your lives`;
   const phase2 = `falls within our care"`;
 
+  const navigate = useNavigate();
+
   const LoginForm = () => {
+    const navigateToRegister = () => {
+      navigate('/register');
+    };
     const loginFormPhase = `Don't you have an account?`;
     const initialValues = {
       email: '',
@@ -186,6 +192,7 @@ function OnboadingPage() {
                 marginTop: '11px',
                 '&:hover': { color: '#0000ff' }
               }}
+              onClick={navigateToRegister}
               variant="text">
               Register Now
             </Button>

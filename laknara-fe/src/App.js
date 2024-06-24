@@ -2,6 +2,7 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import OnboadingPage from './Pages/Onboarding/OnboardingPage';
+import Register from './Pages/Register/RegisterPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<OnboadingPage />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
       </>
