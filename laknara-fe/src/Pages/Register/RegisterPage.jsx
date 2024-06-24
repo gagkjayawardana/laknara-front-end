@@ -81,7 +81,7 @@ const Register_Right_Content = styled.div`
 const Register_Form_Buttons = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 20px;
   padding-right: 10px;
   padding-left: 10px;
@@ -115,6 +115,7 @@ function Register() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(values);
+      navigate('/registrationSuccess');
     }
   });
 
