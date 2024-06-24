@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import OnboadingPage from './Pages/Onboarding/OnboardingPage';
+import Register from './Pages/Register/RegisterPage';
+import RegistrationSuccess from './Pages/RegistrationSuccess/RegistrationSuccessPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        <CssBaseline />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<OnboadingPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/registrationSuccess" element={<RegistrationSuccess />} />
+          </Routes>
+        </BrowserRouter>
+      </>
     </div>
   );
 }
