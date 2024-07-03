@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import HealthCareLogo from '../Logo/HealthcareLogo';
 
 const Header_Container = styled.div`
   width: 100%;
@@ -20,10 +20,6 @@ const Header_Container = styled.div`
 
 const Header_Title_with_Logo = styled.div`
   width: 65%;
-`;
-
-const Header_Title = styled.div`
-  display: flex;
 `;
 
 const Header_Bottons = styled.div`
@@ -53,17 +49,7 @@ function Header() {
   return (
     <Header_Container>
       <Header_Title_with_Logo>
-        <Header_Title>
-          <Typography variant="h5" gutterBottom>
-            Health
-          </Typography>
-          <Typography sx={{ color: '#0000ff' }} variant="h5" gutterBottom>
-            Care
-          </Typography>
-        </Header_Title>
-        <Typography sx={{ marginTop: '-12px' }} variant="subtitle2" gutterBottom>
-          Your Health,Our Priority
-        </Typography>
+        <HealthCareLogo />
       </Header_Title_with_Logo>
       <Header_Bottons>
         <Button
